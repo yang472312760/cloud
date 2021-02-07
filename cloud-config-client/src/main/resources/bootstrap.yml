@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: config-client
+  cloud:
+    config:
+      label: main
+      name: application
+      profile: test
+      uri: http://localhost:3344
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
