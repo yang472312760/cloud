@@ -111,6 +111,7 @@
                     <include>*.yml</include>
                     <include>*.txt</include>
                     <include>**/*.ftl</include>
+                    <include>**/*.conf</include>
                 </includes>
             </resource>
         </resources>

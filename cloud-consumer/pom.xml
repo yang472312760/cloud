@@ -42,6 +42,10 @@
             <optional>true</optional>
             <scope>runtime</scope>
         </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-zipkin</artifactId>
+        </dependency>
         <!-- 应用程序监控 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>

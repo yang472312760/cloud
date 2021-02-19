@@ -1,0 +1,29 @@
+server:
+  port: 9527
+spring:
+  application:
+    name: cloud-gateway
+  cloud:
+    gateway:
+      routes:
+        - id: test_routh #路由的ID，没有固定规则但要求唯一，建议配合服务名
+          uri: lb://cloud-provider   #匹配后提供服务的路由地址
+          predicates:
+            - Path=/test/name/**   #断言,路径相匹配的进行路由
+
+        - id: test_routh2
+          uri: lb://cloud-provider
+          predicates:
+            - Path=/test1/name/**   #断言,路径相匹配的进行路由
+
+
+eureka:
+  instance:
+    hostname: cloud-gateway-service
+  client:
+    service-url:
+      register-with-eureka: true
+      fetch-registry: true
+      defaultZone: http://192.168.220.128:7001/eureka
+
+

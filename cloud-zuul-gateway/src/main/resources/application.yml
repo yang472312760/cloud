@@ -1,0 +1,19 @@
+server:
+  port: 9527
+
+spring:
+  application:
+    name: cloud-zuul-gateway
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://192.168.220.128:7001/eureka
+  instance:
+    instance-id: gateway-9527.com
+zuul:
+  prefix: /yang
+  ignored-services: cloud-provider
+  routes:
+    provider.serviceId: cloud-provider
+    provider.path: /provider/**

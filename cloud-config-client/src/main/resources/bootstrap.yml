@@ -1,3 +1,4 @@
+
 spring:
   application:
     name: config-client
@@ -7,8 +8,19 @@ spring:
       name: application
       profile: test
       uri: http://localhost:3344
+  rabbitmq:
+    host: 192.168.220.128
+    port: 5672
+    username: guest
+    password: guest
+eureka:
+  client:
+    service-url:
+      defaultZone: http://192.168.220.128:7001/eureka
 management:
   endpoints:
     web:
       exposure:
         include: "*"
+server:
+  port: 3355

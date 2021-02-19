@@ -22,6 +22,6 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 public class StorageApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(SpringApplication.class,args);
+        SpringApplication.run(StorageApplication.class,args);
     }
 }

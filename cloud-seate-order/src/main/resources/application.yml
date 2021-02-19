@@ -11,10 +11,10 @@ spring:
         tx-service-group: fsp_tx_group
     nacos:
       discovery:
-        server-addr: localhost:8848
+        server-addr: 192.168.220.128:8848
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://192.168.220.132:3308/seata_order
+    url: jdbc:mysql://192.168.220.128:3307/seata_order
     username: root
     password: 123456
 
